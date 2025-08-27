@@ -23,3 +23,41 @@ phone1 = Smartphone("Samsung", "S24 Ultra", "Android", "512GB")
 phone1.install_app("WhatsApp")
 phone1.use_battery(30)
 phone1.charge()
+
+
+ASSIGNMENT 2
+# 🚗✈️⛵🚴 Python OOP – Polymorphism with Vehicles
+
+This project demonstrates **Polymorphism** in Python using a `Vehicle` base class and several subclasses (`Car`, `Plane`, `Boat`, `Bicycle`).  
+Each subclass overrides the same method `move()`, but implements it differently.
+
+---
+
+## 📌 Code Overview
+
+```python
+class Vehicle:
+    def move(self):
+        pass  # Placeholder (to be overridden by subclasses)
+
+class Car(Vehicle):
+    def move(self):
+        print("🚗 Driving on the road...")
+
+class Plane(Vehicle):
+    def move(self):
+        print("✈️ Flying in the sky...")
+
+class Boat(Vehicle):
+    def move(self):
+        print("⛵ Sailing on water...")
+
+class Bicycle(Vehicle):
+    def move(self):
+        print("🚴 Pedaling on the path...")
+
+# Demonstrating polymorphism
+vehicles = [Car(), Plane(), Boat(), Bicycle()]
+
+for v in vehicles:
+    v.move()  # Same method name, but different behavior!
